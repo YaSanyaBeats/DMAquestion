@@ -1,0 +1,6 @@
+<div class="start__wrapper" *ngIf="!isStart">
+	<h1>DMA QuestionRoom</h1>
+	<button (click)="isStart = true">Start this!</button>
+</div>
+<app-questions (answer)="openAnswer($event)" *ngIf="isStart && !isAnswered"></app-questions>
+<app-answer *ngIf="isAnswered" [answerObj]="answerObj"></app-answer>

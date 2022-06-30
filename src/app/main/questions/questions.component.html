@@ -1,0 +1,8 @@
+<div class="questions__wrapper">
+	<h2>{{questions[getRightIndex()].question}}</h2>
+	<ul class="questions">
+		<li *ngFor="let elem of questions">
+			<button (click)="checkAnswer(elem.answer)">{{elem.answer}}</button>
+		</li>
+	</ul>
+</div>
